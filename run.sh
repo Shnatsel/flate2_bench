@@ -1,5 +1,5 @@
 # -Cllvm-args=-enable-dfa-jump-thread helps optimize the inflate state machine.
-FLAGS="-Cllvm-args=-enable-dfa-jump-thread"
+#FLAGS="-Cllvm-args=-enable-dfa-jump-thread"
 # FLAGS=""
 
 CC=clang RUSTFLAGS="$FLAGS" cargo +nightly build  --release --features=miniz_oxide
