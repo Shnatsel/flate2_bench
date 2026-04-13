@@ -4,6 +4,8 @@ FLAGS="-Cllvm-args=-enable-dfa-jump-thread"
 
 CC=clang RUSTFLAGS="$FLAGS" cargo +nightly build  --release --features=miniz_oxide
 cp target/release/flate2_bench target/release/flate2_bench_miniz_oxide
+CC=clang RUSTFLAGS="$FLAGS" cargo +nightly build  --release --features=fdeflate
+cp target/release/flate2_bench target/release/flate2_bench_fdeflate
 CC=clang RUSTFLAGS="$FLAGS" cargo +nightly build --release --features=zlib-ng
 cp target/release/flate2_bench target/release/flate2_bench_zlib_ng
 CC=clang RUSTFLAGS="$FLAGS" cargo +nightly build --release --features=zlib-rs
